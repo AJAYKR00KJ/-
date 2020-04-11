@@ -475,9 +475,9 @@ for(var i=0;i<response.data.covid19Stats.length;i++)
 // var conf = response.data.covid19Stats[0].confirmed;
 document.getElementById("latest").innerHTML = "Updated on " +  response.data.lastChecked;
 document.getElementById("country").innerHTML = "India";
-document.getElementById("patient").innerHTML = conf;
-document.getElementById("death").innerHTML = death;
-document.getElementById("rec").innerHTML = rec;
+document.getElementById("patient").innerHTML = conf-1520;
+document.getElementById("death").innerHTML = death-35;
+document.getElementById("rec").innerHTML = rec-255;
 
 //***Pichart ***//
 
@@ -569,14 +569,26 @@ for(var i=0;i<response.data.covid19Stats.length;i++)
 
 // var death = response.data.covid19Stats[0].deaths;
 // var conf = response.data.covid19Stats[0].confirmed;
-document.getElementById("latest").innerHTML = "Updated on " +  response.data.lastChecked;
+  
+if(response.data.covid19Stats[0].country=="India")
+{
+  document.getElementById("latest").innerHTML = "Updated on " +  response.data.lastChecked;
+document.getElementById("country").innerHTML = "India";
+document.getElementById("patient").innerHTML = conf-1520;
+document.getElementById("death").innerHTML = death-35;
+document.getElementById("rec").innerHTML = rec-255;
+
+}
+
+else
+{document.getElementById("latest").innerHTML = "Updated on " +  response.data.lastChecked;
 if(cou=="World")
   document.getElementById("country").innerHTML = "World";
 else
 document.getElementById("country").innerHTML = response.data.covid19Stats[0].country;
 document.getElementById("patient").innerHTML = conf;
 document.getElementById("death").innerHTML = death;
-document.getElementById("rec").innerHTML = rec;
+document.getElementById("rec").innerHTML = rec;}
 
 //***Pichart ***//
 
