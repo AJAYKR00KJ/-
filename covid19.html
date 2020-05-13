@@ -428,7 +428,7 @@ h1 {
      <script>
 function xa()
 {
-  alert("You are not allowed, Only for admin");
+  alert("You are not allowed, Only for admin access");
 }
 
  window.console = window.console || function(t) {};
@@ -475,9 +475,9 @@ for(var i=0;i<response.data.covid19Stats.length;i++)
 // var conf = response.data.covid19Stats[0].confirmed;
 document.getElementById("latest").innerHTML = "Updated on " +  response.data.lastChecked;
 document.getElementById("country").innerHTML = "India";
-document.getElementById("patient").innerHTML = conf-1033;
-document.getElementById("death").innerHTML = death-5;
-document.getElementById("rec").innerHTML = rec-132;
+document.getElementById("patient").innerHTML = conf-rec;
+document.getElementById("death").innerHTML = death;
+document.getElementById("rec").innerHTML = rec;
 
 //***Pichart ***//
 
@@ -574,9 +574,9 @@ if(response.data.covid19Stats[0].country=="India")
 {
   document.getElementById("latest").innerHTML = "Updated on " +  response.data.lastChecked;
 document.getElementById("country").innerHTML = "India";
-document.getElementById("patient").innerHTML = conf-1033;
-document.getElementById("death").innerHTML = death-5;
-document.getElementById("rec").innerHTML = rec-132;
+document.getElementById("patient").innerHTML = conf-rec;
+document.getElementById("death").innerHTML = death;
+document.getElementById("rec").innerHTML = rec;
 
 }
 
